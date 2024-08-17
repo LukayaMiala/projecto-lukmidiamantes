@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Jogos</title>
+
+<style>
+   body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+#content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Estilos para a animação */
+.animating-word{
+    font-size: 24px; /* Tamanho inicial da palavra */
+    animation: pulse 2s infinite; /*Nome da animação, duração e repetição */
+}
+
+@keyframes pulse{
+    0%{ font-size: 24px; }/*Tamanho inicial */
+    50%{ font-size: 36px; }/*Tamanho ampliado */
+    100%{ font-size: 24px;}/*Tamanho reduzido de volta ao inicial */
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <!--  <p style="text-align: left;"><span class="animating-word">LukMi</span></p>-->
+        <h1 style="color: #d2691e;">LukMi</h1>
+        
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Jogos</a></li>
+                <li><a href="receber.html">Depositar</a></li>
+                <li><a href="transferir.html">Levantar</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <!-- Conteúdo do site aqui -->
+           <style> body{
+              background-image: url(logotipo.jpg); background-size: cover; background-repeat: no-repeat;
+           } </style>
+        <p>Bem vindo</p>
+    </section>
+   <!-- 
+    <footer>
+        <p>&copy; 2024 LukMi.com</p>
+    </footer>
+     -->
+
+    <script src="script.js"></script>
+</body>
+</html>

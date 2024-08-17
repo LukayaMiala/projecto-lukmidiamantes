@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+    <style>
+    body {
+    background-image: url("../imagens/logotipo.jpg");
+    background-size: cover;  /* A imagem cobre todo o fundo */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Não repete a imagem */
+    background-attachment: fixed;  /* Mantém a imagem fixa ao rolar a página */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* A altura do body é 100% da altura da tela */
+    margin: 0;
+    overflow: hidden;
+    background-color: #1a1a2e;
+}
+.botao-superior-direito {
+    position: absolute;  /* Permite o posicionamento relativo ao contêiner */
+    top: 10px;           /* Distância do topo da página */
+    right: 10px;         /* Distância da direita da página */
+    padding: 10px 20px;  /* Espaçamento interno do botão */
+    background-color: #007BFF;  /* Cor de fundo do botão */
+    color: white;        /* Cor do texto do botão */
+    border: none;        /* Remove bordas */
+    border-radius: 5px;  /* Bordas arredondadas */
+    cursor: pointer;     /* Apresenta cursor de "mão" ao passar sobre o botão */
+    box-shadow: 5px 5.1px #1a1a2e;
+}
+
+.botao-superior-direito:hover {
+    background-color: #0056b3;  /* Cor do botão ao passar o mouse */
+}
+
+
+
+        .box {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 27%;
+            box-shadow: 7px 7px 20px black;
+        }
+
+        fieldset {
+            border: 3px solid rgb(16, 17, 19);
+        }
+
+        legend {
+            border: 1px solid rgb(34, 37, 41);
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(21, 33, 46);
+            border-radius: 8px;
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+
+        #data_nascimento {
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        #submit {
+            background-image: linear-gradient(to right, rgb(15, 20, 26), rgb(27, 17, 46));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgb(12, 12, 32);
+        }
+
+        #submit:hover {
+            background-image: linear-gradient(to right, rgb(31, 37, 26), rgb(17, 7, 36));
+        }
+        
+        @media (max-width: 768px) {
+        .box{
+            width: 270px; 
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <a href="login.html">
+        <button class="botao-superior-direito">Entrar</button>
+    </a>
+
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulário de Cadastro</b> </legend>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" id="nome" name="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Usuario:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" nome="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone:</label>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" id="senha" name="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput">Senha:</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" class="inputUser" required>
+                        <label for="confirmar-senha" class="labelInput">Confirmar Senha:</label>
+                    </div>
+                </div><br>
+                <input type="submit" name="submit" id="submit">
+                <p style="color: slateblue;">Faça dinheiro procurando diamantes!💎</p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

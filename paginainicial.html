@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LukMi Games</title>
+</head>
+<style>
+      body {
+        background-image: url("imagens/logotipo.jpg");
+    background-size: cover;  /* A imagem cobre todo o fundo */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Não repete a imagem */
+    background-attachment: fixed;  /* Mantém a imagem fixa ao rolar a página */
+    align-items: center;
+    display: fixed;
+    align-items: center;
+    height: 100vh;  /* A altura do body é 100% da altura da tela */
+    margin: 0;
+    overflow: hidden;
+    background-color: #1a1a2e;
+    /* background-color: #252525; /* Cor de fundo mais escura */ 
+    }
+    
+    header {
+      background: linear-gradient(180deg, #1f039e 0%, #220505 100%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+    }
+
+    .logo img {
+      float: left;
+       margin-left: 20px; /* Ajuste o valor conforme necessário */
+      width: 70px; /* ajuste conforme necessário */
+      border-radius: 50%;  
+      height: 70px;
+      box-shadow: 0 0 24px rgba(52, 9, 9, 0.926);
+
+    }
+
+    main {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .gradiente-texto {
+      margin-left: 60px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            /*text-fill-color: transparent;*/
+            overflow: hidden; /* Para garantir que o texto flua ao lado da imagem */
+        }
+
+    button {
+      padding: 12px 24px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333a41;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1c3045;
+      box-shadow: 0 0 6px rgba(52, 9, 9, 0.926);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    .welcome-message {
+        font-size: 28px;
+        text-align: center;
+        animation: fadeOutAndIn 5s infinite;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 80%;
+        /* Adicionado para limitar a largura da mensagem */
+        margin: 0 auto;
+        /* Centraliza horizontalmente */
+    }
+    .welcome-options{
+        font-size: 18px;
+        position: fixed;
+        bottom: 170px;
+        right: 585px;
+        color: white;
+    }
+        @keyframes fadeOutAndIn {
+
+        0%,
+        100% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    /* Responsividade */
+    @media screen and (max-width: 600px) {
+      .logo img {
+       width: 75px; /* ajuste conforme necessário */
+      border-radius: 50%;  
+      height: 75px;
+      box-shadow: 0 0 24px rgba(52, 9, 9, 0.926);
+      }
+      h1 {
+        font-size: 24px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      .menu {
+            width: 200px;
+        }
+
+        .menu-list li a {
+            padding: 8px 15px;
+            font-size: 16px;
+        }
+
+        .welcome-message {
+            font-size: 24px;
+        }        
+    }
+
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        const menuBtn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+
+        const messages = [
+            {
+                text: "Bem Vindo a LukMi Diamantes",
+                emoji: ""
+            },
+            {
+                text: "Get Money 🤑",
+                emoji: "💸"
+            }
+        ];
+
+        let currentMessageIndex = 0;
+
+        function toggleWelcomeMessage() {
+            const message = messages[currentMessageIndex];
+            welcomeMessage.innerHTML = `${message.emoji}${message.text}${message.emoji}`;
+            welcomeMessage.style.opacity = welcomeMessage.style.opacity === "0" ? "1" : "0";
+
+            currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+        }
+
+        function toggleMenu() {
+            menu.style.left = menu.style.left === "0px" ? "-250px" : "0px";
+        }
+
+        setInterval(toggleWelcomeMessage, 5000);
+
+        menuBtn.addEventListener("click", toggleMenu);
+    });
+
+
+</script>
+
+<body>
+    <header>
+        <div class="logo">
+          <img src="imagens/logo.jpg" alt="Logotipo LukMi">
+        <!-- <a href="" style="text-align: center;">LukMi</a>LukMi--> 
+        </div> 
+        <div class="gradiente-texto">
+          <h3 style="text-align: center;" >LukMiDiamantes</h3>
+      </div>
+      </header>
+      <main>
+        <br><br><br><br>
+        <div class="welcome-message" id="welcomeMessage">
+            Bem Vindo a LukMi Diamantes
+        </div>
+        <div class="buttons">
+          <a href="loginCad/login.html"><button id="login-btn">Entrar</button></a>
+          <a href="loginCad/cadastro.html"><button id="signup-btn">Cadastrar</button></a>
+        </div>
+      </main>
+      <script>
+        document.getElementById("login-btn").addEventListener("click", function() {
+          // Adicione aqui o código para redirecionar para a página de login
+        });
+    
+        document.getElementById("signup-btn").addEventListener("click", function() {
+          // Adicione aqui o código para redirecionar para a página de cadastro
+        });
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>

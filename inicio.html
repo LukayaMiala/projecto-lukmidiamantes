@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem Vindo a LukMi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+    }
+
+    .logo img {
+      width: 150px; /* ajuste conforme necessário */
+    }
+
+    main {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    /* Responsividade */
+    @media screen and (max-width: 600px) {
+      .logo img {
+        width: 120px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logotipo LukMi">
+    </div>
+  </header>
+  <main>
+    <h1>Seja bem-vindo a LukMi</h1>
+    <div class="buttons">
+      <button id="login-btn">Entrar</button>
+      <button id="signup-btn">Cadastrar</button>
+    </div>
+  </main>
+  <script>
+    document.getElementById("login-btn").addEventListener("click", function() {
+      // Adicione aqui o código para redirecionar para a página de login
+    });
+
+    document.getElementById("signup-btn").addEventListener("click", function() {
+      // Adicione aqui o código para redirecionar para a página de cadastro
+    });
+  </script>
+</body>
+</html>

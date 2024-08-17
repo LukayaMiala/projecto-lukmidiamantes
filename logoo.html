@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Site</title>
+  <style>    
+    /* Estilos CSS para a imagem do logotipo */
+    #logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      opacity: 0;/* Começa com a opacidade em 0 para esconder a imagem */
+      transition: opacity 3s; /* Adiciona uma transição de opacidade com duração de 2 segundos */
+    }
+  </style>
+</head>
+<body>
+  <!-- Aqui está a imagem do logotipo -->
+  <img id="logo" src="logo.jpg" alt="Logo do Fotoluk">
+
+  <script>
+// Define a opacidade como 1 após um pequeno intervalo para que a transição seja adicionada
+setTimeout(function(){
+  document.getElementById('logo').style.opacity = '1';
+}, 100);
+
+
+    // Aguarda 5 segundos e depois esconde a imagem do logotipo
+    setTimeout(function() {
+      document.getElementById('logo').style.display = '0';
+      // Redireciona para a página de login
+      setTimeout(function(){
+window.location.href = 'paginainicial.html';
+      }, 2000);//Aguarda mais 2 segundos antes de redirecionar
+    }, 3000);
+  </script>
+</body>
+</html>
