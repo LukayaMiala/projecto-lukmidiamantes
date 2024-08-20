@@ -1,16 +1,19 @@
 body {
-    background-image: url("imagens/fundo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-color: #252525; /* Cor de fundo mais escura */
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
+    background-image: url("imagens/fundo.jpg"); /* Imagem de fundo */
+    background-size: cover; /* Cobre todo o fundo */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    text-align: center; /* Alinhamento do texto ao centro */
+    margin: 0; /* Remove margem padrão do body */
+    
+    /* Alinhamento central */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    
+    height: 100vh; /* Altura do viewport */
+    overflow: hidden; /* Oculta o transbordo da página */
 }
 
 .container {
@@ -19,7 +22,6 @@ body {
     border-radius: 10px;
     box-shadow: 3px 3px 15px rgb(153, 0, 255);
 }
-
 
 .header {
     box-shadow: 3px 3px 3px black;
