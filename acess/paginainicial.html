@@ -20,7 +20,6 @@
     margin: 0;
     overflow: hidden;
     background-color: #1a1a2e;
-    /* background-color: #252525; /* Cor de fundo mais escura */ 
     }
     
     header {
@@ -121,7 +120,7 @@
     }
 
     /* Responsividade */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .logo img {
        width: 75px; /* ajuste conforme necessário */
       border-radius: 50%;  
@@ -147,7 +146,14 @@
 
         .welcome-message {
             font-size: 24px;
-        }        
+        }  
+        
+        body {
+        background-size: cover; /* Mantém a imagem cobrindo todo o fundo */
+        background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+        min-height: 100vh; /* Garante que a imagem ocupe no mínimo 100% da altura da viewport */
+    }
+    
     }
 
 </style>
