@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Formulario de Cadastro</title>
     <style>
     body {
-    background-image: url("../imagens/logotipo.jpg");
-    background-size: cover;  /* A imagem cobre todo o fundo */
-    background-position: center;  /* Centraliza a imagem */
-    background-repeat: no-repeat;  /* Não repete a imagem */
+   /* background-image: url("../imagens/logotipo.jpg");
+    background-size: cover;  /* A imagem cobre todo o fundo
+    background-position: center;  /* Centraliza a imagem
+    background-repeat: no-repeat;  /* Não repete a imagem 
     background-attachment: fixed;  /* Mantém a imagem fixa ao rolar a página */
+    background-color: #0b043c;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -20,7 +21,6 @@
     height: 100vh;  /* A altura do body é 100% da altura da tela */
     margin: 0;
     overflow: hidden;
-    background-color: #1a1a2e;
 }
 .botao-superior-direito {
     position: absolute;  /* Permite o posicionamento relativo ao contêiner */
@@ -38,8 +38,6 @@
 .botao-superior-direito:hover {
     background-color: #0056b3;  /* Cor do botão ao passar o mouse */
 }
-
-
 
         .box {
             color: white;
@@ -137,7 +135,9 @@
     <div class="box">
         <form action="">
             <fieldset>
-                <legend><b>Formulário de Cadastro</b> </legend>
+                <legend><div class="header" style="border-radius: 20px; box-shadow: 10px 10px 10px;">
+                </div>
+                    <b>Formulário de Cadastro</b> </legend>
                 <br><br>
                 <div class="inputBox">
                     <input type="text" id="nome" name="nome" class="inputUser" required>
