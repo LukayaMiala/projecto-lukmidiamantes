@@ -23,7 +23,7 @@
             style="width: 29px; color: #000; height: 29px; border-radius: 17%;">
     </a>
     <br><br>
-    <form action="" style="text-align: center;">
+<!-- <form action="" style="text-align: center;">
         <table
             style="border: 1px solid black; margin: auto; background-color: rgb(66, 65, 65); box-shadow: 18px 18px 18px; border-radius: 1%;">
             <tr>
@@ -41,7 +41,32 @@
                 </td>
             </tr>
         </table>
-    </form>
+    </form> --> 
+
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AaT6-gupuvpd3d3fZmWyKwlZJch-HE5mP119boEQeOGcfrUd3qUrzD4YwFaGej8lFiiTHuZWbScFGxjY"></script>
+
+    <div id="paypal-button-container"></div>
+    
+    <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '20.00'  // O valor do depósito pode ser dinâmico
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Depósito realizado com sucesso por ' + details.payer.name.given_name);
+            // Aqui você pode atualizar o saldo do usuário na sua plataforma
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
     <br><br><br><br><br><br><br><br><br><br>
     <marquee behavior="alternate" direction="right" style="color: rgb(248, 244, 250);">LukMiDiamantes</marquee>
 </body>
